@@ -24,7 +24,7 @@
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
 	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-	imagePicker.allowsEditing = YES;
+//	imagePicker.allowsEditing = YES;
 	imagePicker.delegate = self;
 
 	[self presentViewController:imagePicker animated:true completion:nil];
@@ -33,7 +33,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
 	[self dismissViewControllerAnimated:true completion:nil];
 
-	UIImage *image = info[UIImagePickerControllerEditedImage];
+	UIImage *image = info[UIImagePickerControllerOriginalImage];
 	self.imageView.image = image;
 
 	REPImageProcessor *processor = [[REPImageProcessor alloc] init];

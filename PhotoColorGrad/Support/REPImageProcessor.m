@@ -30,11 +30,14 @@
 	CFDataRef imageCfData = CGDataProviderCopyData(imageDataProvider);
 
 	NSData *imageData = (__bridge_transfer NSData *)imageCfData;
-	int *bytes = (int *)imageData.bytes;
+	uint8_t *bytes = (uint8_t *)imageData.bytes;
 
 	for (uint i = 0; i < 20; i++) {
 		NSLog(@"%d", bytes[i]);
 	}
+
+	CGImageRelease(cgImage);
+	CGDataProviderRelease(imageDataProvider);
 
 	completion();
 }
