@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		331138FD244061A800920C62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 331138FC244061A800920C62 /* AppDelegate.m */; };
+		33113900244061A800920C62 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 331138FF244061A800920C62 /* SceneDelegate.m */; };
+		33113903244061A800920C62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33113902244061A800920C62 /* ViewController.m */; };
+		33113906244061A800920C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33113904244061A800920C62 /* Main.storyboard */; };
+		33113908244061AA00920C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33113907244061AA00920C62 /* Assets.xcassets */; };
+		3311390B244061AA00920C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33113909244061AA00920C62 /* LaunchScreen.storyboard */; };
+		3311390E244061AA00920C62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311390D244061AA00920C62 /* main.m */; };
+		33113918244061AA00920C62 /* PhotoColorGradTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33113917244061AA00920C62 /* PhotoColorGradTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33113914244061AA00920C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 331138F0244061A800920C62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 331138F7244061A800920C62;
+			remoteInfo = PhotoColorGrad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		331138F8244061A800920C62 /* PhotoColorGrad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoColorGrad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		331138FB244061A800920C62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		331138FC244061A800920C62 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		331138FE244061A800920C62 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		331138FF244061A800920C62 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		33113901244061A800920C62 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		33113902244061A800920C62 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		33113905244061A800920C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33113907244061AA00920C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3311390A244061AA00920C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3311390C244061AA00920C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3311390D244061AA00920C62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33113913244061AA00920C62 /* PhotoColorGradTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoColorGradTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33113917244061AA00920C62 /* PhotoColorGradTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoColorGradTests.m; sourceTree = "<group>"; };
+		33113919244061AA00920C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		331138F5244061A800920C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33113910244061AA00920C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		331138EF244061A800920C62 = {
+			isa = PBXGroup;
+			children = (
+				331138FA244061A800920C62 /* PhotoColorGrad */,
+				33113916244061AA00920C62 /* PhotoColorGradTests */,
+				331138F9244061A800920C62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		331138F9244061A800920C62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				331138F8244061A800920C62 /* PhotoColorGrad.app */,
+				33113913244061AA00920C62 /* PhotoColorGradTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		331138FA244061A800920C62 /* PhotoColorGrad */ = {
+			isa = PBXGroup;
+			children = (
+				331138FB244061A800920C62 /* AppDelegate.h */,
+				331138FC244061A800920C62 /* AppDelegate.m */,
+				331138FE244061A800920C62 /* SceneDelegate.h */,
+				331138FF244061A800920C62 /* SceneDelegate.m */,
+				33113901244061A800920C62 /* ViewController.h */,
+				33113902244061A800920C62 /* ViewController.m */,
+				33113904244061A800920C62 /* Main.storyboard */,
+				33113907244061AA00920C62 /* Assets.xcassets */,
+				33113909244061AA00920C62 /* LaunchScreen.storyboard */,
+				3311390C244061AA00920C62 /* Info.plist */,
+				3311390D244061AA00920C62 /* main.m */,
+			);
+			path = PhotoColorGrad;
+			sourceTree = "<group>";
+		};
+		33113916244061AA00920C62 /* PhotoColorGradTests */ = {
+			isa = PBXGroup;
+			children = (
+				33113917244061AA00920C62 /* PhotoColorGradTests.m */,
+				33113919244061AA00920C62 /* Info.plist */,
+			);
+			path = PhotoColorGradTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		331138F7244061A800920C62 /* PhotoColorGrad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3311391C244061AA00920C62 /* Build configuration list for PBXNativeTarget "PhotoColorGrad" */;
+			buildPhases = (
+				331138F4244061A800920C62 /* Sources */,
+				331138F5244061A800920C62 /* Frameworks */,
+				331138F6244061A800920C62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoColorGrad;
+			productName = PhotoColorGrad;
+			productReference = 331138F8244061A800920C62 /* PhotoColorGrad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33113912244061AA00920C62 /* PhotoColorGradTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3311391F244061AA00920C62 /* Build configuration list for PBXNativeTarget "PhotoColorGradTests" */;
+			buildPhases = (
+				3311390F244061AA00920C62 /* Sources */,
+				33113910244061AA00920C62 /* Frameworks */,
+				33113911244061AA00920C62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33113915244061AA00920C62 /* PBXTargetDependency */,
+			);
+			name = PhotoColorGradTests;
+			productName = PhotoColorGradTests;
+			productReference = 33113913244061AA00920C62 /* PhotoColorGradTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		331138F0244061A800920C62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Red_Egg Productions";
+				TargetAttributes = {
+					331138F7244061A800920C62 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					33113912244061AA00920C62 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 331138F7244061A800920C62;
+					};
+				};
+			};
+			buildConfigurationList = 331138F3244061A800920C62 /* Build configuration list for PBXProject "PhotoColorGrad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 331138EF244061A800920C62;
+			productRefGroup = 331138F9244061A800920C62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				331138F7244061A800920C62 /* PhotoColorGrad */,
+				33113912244061AA00920C62 /* PhotoColorGradTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		331138F6244061A800920C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3311390B244061AA00920C62 /* LaunchScreen.storyboard in Resources */,
+				33113908244061AA00920C62 /* Assets.xcassets in Resources */,
+				33113906244061A800920C62 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33113911244061AA00920C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		331138F4244061A800920C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33113903244061A800920C62 /* ViewController.m in Sources */,
+				331138FD244061A800920C62 /* AppDelegate.m in Sources */,
+				3311390E244061AA00920C62 /* main.m in Sources */,
+				33113900244061A800920C62 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3311390F244061AA00920C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33113918244061AA00920C62 /* PhotoColorGradTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33113915244061AA00920C62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 331138F7244061A800920C62 /* PhotoColorGrad */;
+			targetProxy = 33113914244061AA00920C62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33113904244061A800920C62 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33113905244061A800920C62 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		33113909244061AA00920C62 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3311390A244061AA00920C62 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3311391A244061AA00920C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3311391B244061AA00920C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3311391D244061AA00920C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = PhotoColorGrad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGrad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3311391E244061AA00920C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = PhotoColorGrad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGrad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33113920244061AA00920C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = PhotoColorGradTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGradTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoColorGrad.app/PhotoColorGrad";
+			};
+			name = Debug;
+		};
+		33113921244061AA00920C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L5UZAT7KA9;
+				INFOPLIST_FILE = PhotoColorGradTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGradTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoColorGrad.app/PhotoColorGrad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		331138F3244061A800920C62 /* Build configuration list for PBXProject "PhotoColorGrad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3311391A244061AA00920C62 /* Debug */,
+				3311391B244061AA00920C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3311391C244061AA00920C62 /* Build configuration list for PBXNativeTarget "PhotoColorGrad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3311391D244061AA00920C62 /* Debug */,
+				3311391E244061AA00920C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3311391F244061AA00920C62 /* Build configuration list for PBXNativeTarget "PhotoColorGradTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33113920244061AA00920C62 /* Debug */,
+				33113921244061AA00920C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 331138F0244061A800920C62 /* Project object */;
+}
