@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Photos/Photos.h>
+#import "REPImageProcessor.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -34,6 +35,11 @@
 
 	UIImage *image = info[UIImagePickerControllerEditedImage];
 	self.imageView.image = image;
+
+	REPImageProcessor *processor = [[REPImageProcessor alloc] init];
+	[processor loadImage:image completionHandler:^{
+		NSLog(@"finished!");
+	}];
 }
 
 @end

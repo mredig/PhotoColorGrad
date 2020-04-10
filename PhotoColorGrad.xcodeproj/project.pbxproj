@@ -15,6 +15,8 @@
 		3311390B244061AA00920C62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33113909244061AA00920C62 /* LaunchScreen.storyboard */; };
 		3311390E244061AA00920C62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311390D244061AA00920C62 /* main.m */; };
 		33113918244061AA00920C62 /* PhotoColorGradTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33113917244061AA00920C62 /* PhotoColorGradTests.m */; };
+		3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311392724411E5F00920C62 /* REPImageProcessor.m */; };
+		3311392B24411EAD00920C62 /* REPImagePixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311392A24411EAD00920C62 /* REPImagePixel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		33113913244061AA00920C62 /* PhotoColorGradTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoColorGradTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33113917244061AA00920C62 /* PhotoColorGradTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoColorGradTests.m; sourceTree = "<group>"; };
 		33113919244061AA00920C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3311392624411E5F00920C62 /* REPImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = REPImageProcessor.h; path = Support/REPImageProcessor.h; sourceTree = "<group>"; };
+		3311392724411E5F00920C62 /* REPImageProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = REPImageProcessor.m; path = Support/REPImageProcessor.m; sourceTree = "<group>"; };
+		3311392924411EAD00920C62 /* REPImagePixel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPImagePixel.h; sourceTree = "<group>"; };
+		3311392A24411EAD00920C62 /* REPImagePixel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPImagePixel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 		331138FA244061A800920C62 /* PhotoColorGrad */ = {
 			isa = PBXGroup;
 			children = (
+				3311392624411E5F00920C62 /* REPImageProcessor.h */,
+				3311392724411E5F00920C62 /* REPImageProcessor.m */,
+				3311392924411EAD00920C62 /* REPImagePixel.h */,
+				3311392A24411EAD00920C62 /* REPImagePixel.m */,
 				33113901244061A800920C62 /* ViewController.h */,
 				33113902244061A800920C62 /* ViewController.m */,
 				33113922244061BE00920C62 /* Support */,
@@ -216,7 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3311392B24411EAD00920C62 /* REPImagePixel.m in Sources */,
 				33113903244061A800920C62 /* ViewController.m in Sources */,
+				3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */,
 				331138FD244061A800920C62 /* AppDelegate.m in Sources */,
 				3311390E244061AA00920C62 /* main.m in Sources */,
 				33113900244061A800920C62 /* SceneDelegate.m in Sources */,
