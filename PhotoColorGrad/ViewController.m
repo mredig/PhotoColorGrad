@@ -9,9 +9,11 @@
 #import "ViewController.h"
 #import <Photos/Photos.h>
 #import "REPImageProcessor.h"
+#import "GradientView.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet GradientView *gradientView;
 
 @end
 

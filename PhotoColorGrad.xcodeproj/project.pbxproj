@@ -18,6 +18,7 @@
 		3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311392724411E5F00920C62 /* REPImageProcessor.m */; };
 		3311392B24411EAD00920C62 /* REPImagePixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311392A24411EAD00920C62 /* REPImagePixel.m */; };
 		331139312441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */; };
+		3311393424419E5000920C62 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311393324419E5000920C62 /* GradientView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		3311392A24411EAD00920C62 /* REPImagePixel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPImagePixel.m; sourceTree = "<group>"; };
 		3311392F2441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+NSCountedSet_MostCommon.h"; sourceTree = "<group>"; };
 		331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCountedSet+NSCountedSet_MostCommon.m"; sourceTree = "<group>"; };
+		3311393224419E5000920C62 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		3311393324419E5000920C62 /* GradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */,
 				33113901244061A800920C62 /* ViewController.h */,
 				33113902244061A800920C62 /* ViewController.m */,
+				3311393224419E5000920C62 /* GradientView.h */,
+				3311393324419E5000920C62 /* GradientView.m */,
 				33113922244061BE00920C62 /* Support */,
 			);
 			path = PhotoColorGrad;
@@ -233,6 +238,7 @@
 			files = (
 				3311392B24411EAD00920C62 /* REPImagePixel.m in Sources */,
 				33113903244061A800920C62 /* ViewController.m in Sources */,
+				3311393424419E5000920C62 /* GradientView.m in Sources */,
 				3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */,
 				331139312441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m in Sources */,
 				331138FD244061A800920C62 /* AppDelegate.m in Sources */,

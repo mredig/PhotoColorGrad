@@ -21,8 +21,9 @@
                                     <imageView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-V8-hbf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-lz-7d0">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-lz-7d0" customClass="GradientView">
                                         <rect key="frame" x="0.0" y="675" width="414" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DnI-bd-IN3"/>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="obb-ck-dUc"/>
@@ -48,6 +49,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="gradientView" destination="ctQ-lz-7d0" id="Fcq-lO-Odj"/>
                         <outlet property="imageView" destination="9Wd-V8-hbf" id="owx-qe-XlI"/>
                     </connections>
                 </viewController>
