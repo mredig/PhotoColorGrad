@@ -9,6 +9,7 @@
 #import "REPImageProcessor.h"
 #import <UIKit/UIKit.h>
 #import "REPImagePixel.h"
+#import "NSCountedSet+NSCountedSet_MostCommon.h"
 
 @interface REPImageProcessor()
 
@@ -69,7 +70,7 @@
 
 	NSLog(@"%lu", (unsigned long)[self.pixels count]);
 	NSLog(@"iterations: %d, %zu %zu", count, imageWidth, imageHeight);
-	NSLog(@"pixels: %@", self.pixels);
+	NSLog(@"pixels: %@", [self.pixels allItemsInOrderOfCount]);
 
 	completion();
 }
