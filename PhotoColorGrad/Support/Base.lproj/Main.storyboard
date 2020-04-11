@@ -15,16 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-V8-hbf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rc3-x4-Owg">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="9Wd-V8-hbf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-lz-7d0">
+                                        <rect key="frame" x="0.0" y="675" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="DnI-bd-IN3"/>
+                                            <constraint firstAttribute="height" priority="750" constant="50" id="obb-ck-dUc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Wd-V8-hbf" secondAttribute="trailing" id="3YQ-E7-OEA"/>
-                            <constraint firstItem="9Wd-V8-hbf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bui-W1-UOd"/>
-                            <constraint firstItem="9Wd-V8-hbf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Se9-Wg-n13"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Wd-V8-hbf" secondAttribute="bottom" id="Z8X-I5-Ofp"/>
+                            <constraint firstItem="rc3-x4-Owg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BNh-pl-Om9"/>
+                            <constraint firstItem="rc3-x4-Owg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QJq-IM-seW"/>
+                            <constraint firstItem="rc3-x4-Owg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qvw-AF-66J"/>
+                            <constraint firstItem="rc3-x4-Owg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vA1-2E-pE8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
