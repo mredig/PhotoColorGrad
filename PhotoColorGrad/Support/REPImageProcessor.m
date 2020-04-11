@@ -67,6 +67,7 @@
 		double percent = (double)y / (double)imageHeight;
 		NSLog(@"%f complete", percent);
 	}
+	self.pixels = [self condensePixels:self.pixels withinThreshold:50];
 
 	NSLog(@"%lu", (unsigned long)[self.pixels count]);
 	NSLog(@"pixels: %@", [self.pixels allItemsInOrderOfCount]);
@@ -82,6 +83,39 @@
 	REPImagePixel *grayPix = [REPImagePixel pixelWithRed:average green:average blue:average];
 	
 	return [grayPix distanceTo:pixel isWithin:15];
+}
+
+- (NSCountedSet<REPImagePixel *> *)condensePixels:(NSCountedSet<REPImagePixel *> *)pixels withinThreshold:(double)threshold {
+
+	NSCountedSet *mergedPixels = [[NSCountedSet alloc] init];
+	NSArray *orderArray = pixels.allItemsInOrderOfCount;
+
+	for (int i = 0; i < orderArray.count; i++) {
+		REPImagePixel *thisPixel = (REPImagePixel*)orderArray[i][0];
+		NSUInteger pixelCount = [pixels countForObject:thisPixel];
+		if (pixelCount == 0) {
+			continue;
+		}
+		for (int j = i; j < orderArray.count; j++) {
+			REPImagePixel *mergePixel = (REPImagePixel*)orderArray[j][0];
+			NSUInteger mergePixelCount = [pixels countForObject:mergePixel];
+			if ([thisPixel distanceTo:mergePixel isWithin:threshold]) {
+				for (int k = 0; k < mergePixelCount; k++) {
+					[pixels removeObject:mergePixel];
+					[mergedPixels addObject:thisPixel];
+				}
+			}
+		}
+	}
+
+	return mergedPixels;
+}
+
+- (BOOL)pixel:(REPImagePixel *)pixelA comparedTo:(REPImagePixel *)pixelB isWithin:(double) threshold {
+	if ([pixelA isEqual:pixelB]) {
+		return NO;
+	}
+	return [pixelA distanceTo:pixelB isWithin:threshold];
 }
 
 @end
