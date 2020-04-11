@@ -69,6 +69,7 @@
 
 	NSLog(@"%lu", (unsigned long)[self.pixels count]);
 	NSLog(@"iterations: %d, %zu %zu", count, imageWidth, imageHeight);
+	NSLog(@"pixels: %@", self.pixels);
 
 	completion();
 }
