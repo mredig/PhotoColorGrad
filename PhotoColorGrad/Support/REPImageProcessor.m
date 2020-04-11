@@ -50,7 +50,6 @@
 	NSData *imageData = (__bridge_transfer NSData *)imageCfData;
 	uint8_t *bytes = (uint8_t *)imageData.bytes;
 
-	int count = 0;
 	for (size_t y = 0; y < imageHeight; y++) {
 		for (size_t x = 0; x < imageWidth; x++) {
 			size_t baseOffset = y * bytesPerRow + x * 4;
@@ -61,18 +60,29 @@
 			blue = bytes[baseOffset + 2];
 			REPImagePixel *pixel = [REPImagePixel pixelWithRed:red green:green blue:blue];
 
-			[self.pixels addObject:pixel];
-			count += 1;
+			if (![self pixelIsGreyscale:pixel]) {
+				[self.pixels addObject:pixel];
+			}
 		}
 		double percent = (double)y / (double)imageHeight;
 		NSLog(@"%f complete", percent);
 	}
 
 	NSLog(@"%lu", (unsigned long)[self.pixels count]);
-	NSLog(@"iterations: %d, %zu %zu", count, imageWidth, imageHeight);
 	NSLog(@"pixels: %@", [self.pixels allItemsInOrderOfCount]);
 
 	completion();
+}
+
+- (BOOL)pixelIsGreyscale:(REPImagePixel *)pixel {
+
+	NSUInteger average = (NSUInteger)pixel.red + (NSUInteger)pixel.green + (NSUInteger)pixel.blue;
+	average /= 3;
+
+	REPImagePixel *grayPix = [REPImagePixel pixelWithRed:average green:average blue:average];
+	
+
+	return [grayPix distanceTo:pixel] < 15.0;
 }
 
 @end

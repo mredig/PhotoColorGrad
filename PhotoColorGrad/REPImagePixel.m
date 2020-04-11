@@ -28,6 +28,27 @@
 	return [REPImagePixel pixelWithRed:red green:green blue:blue alpha:255];
 }
 
+- (double)distanceTo:(REPImagePixel *)pixel {
+	double r1, g1, b1, r2, g2, b2;
+
+	r1 = (double)self.red;
+	g1 = (double)self.green;
+	b1 = (double)self.blue;
+	r2 = (double)pixel.red;
+	g2 = (double)pixel.green;
+	b2 = (double)pixel.blue;
+
+	double reds = r1 - r2;
+	double greens = g1 - g2;
+	double blues = b1 - b2;
+	reds *= reds;
+	greens *= greens;
+	blues *= blues;
+
+	return sqrt(reds + greens + blues);
+}
+
+// MARK: - Conformances
 - (NSUInteger)hash {
 	uint32_t red = (uint32_t)_red << 24;
 	uint32_t green = (uint32_t)_green << 16;
