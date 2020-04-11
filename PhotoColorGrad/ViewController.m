@@ -39,7 +39,9 @@
 
 	REPImageProcessor *processor = [[REPImageProcessor alloc] init];
 	[processor loadImage:image completionHandler:^{
-		NSLog(@"finished!");
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.gradientView.colors = processor.colors;
+		});
 	}];
 }
 

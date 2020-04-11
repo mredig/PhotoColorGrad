@@ -14,6 +14,7 @@
 @interface REPImageProcessor()
 
 @property (nonatomic, readwrite) NSCountedSet<REPImagePixel *> *pixels;
+@property (nonatomic, readwrite) NSArray *orderedColors;
 
 @end
 
@@ -28,6 +29,7 @@
 
 - (void)reset {
 	_pixels = [NSCountedSet setWithArray:@[]];
+	_orderedColors = [NSArray array];
 }
 
 - (void)loadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion {
@@ -70,7 +72,8 @@
 	self.pixels = [self condensePixels:self.pixels withinThreshold:50];
 
 	NSLog(@"%lu", (unsigned long)[self.pixels count]);
-	NSLog(@"pixels: %@", [self.pixels allItemsInOrderOfCount]);
+	self.orderedColors = [self.pixels allItemsInOrderOfCount];
+	NSLog(@"pixels: %@", self.orderedColors);
 
 	completion();
 }
@@ -116,6 +119,16 @@
 		return NO;
 	}
 	return [pixelA distanceTo:pixelB isWithin:threshold];
+}
+
+- (NSArray<UIColor *> *)colors {
+	NSMutableArray *justColors = [NSMutableArray arrayWithCapacity:self.orderedColors.count];
+
+	for (NSArray* colorTuple in self.orderedColors) {
+		REPImagePixel *pixel = colorTuple[0];
+		[justColors addObject:pixel.color];
+	}
+	return [justColors copy];
 }
 
 @end

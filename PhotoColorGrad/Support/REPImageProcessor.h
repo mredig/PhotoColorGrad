@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REPImageProcessor : NSObject
 
+@property (nonatomic, readonly) NSArray<UIColor *> *colors;
+
 typedef void (^REPImageProcessorCompletionHandler)(void);
 
 - (instancetype)init;

@@ -66,6 +66,22 @@
 	return (reds + greens + blues) < (threshold * threshold);
 }
 
+// MARK: - Properties
+- (UIColor *)color {
+	double r, g, b, a;
+	r = (CGFloat)self.red;
+	g = (CGFloat)self.green;
+	b = (CGFloat)self.blue;
+	a = (CGFloat)self.alpha;
+
+	r /= 255.0;
+	g /= 255.0;
+	b /= 255.0;
+	a /= 255.0;
+
+	return [UIColor colorWithRed:r green:g blue:b alpha:a];
+}
+
 // MARK: - Conformances
 - (NSUInteger)hash {
 	uint32_t red = (uint32_t)_red << 24;
