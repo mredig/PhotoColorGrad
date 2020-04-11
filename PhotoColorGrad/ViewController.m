@@ -24,7 +24,6 @@
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
 	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-//	imagePicker.allowsEditing = YES;
 	imagePicker.delegate = self;
 
 	[self presentViewController:imagePicker animated:true completion:nil];
