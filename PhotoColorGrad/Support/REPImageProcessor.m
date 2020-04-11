@@ -81,8 +81,7 @@
 
 	REPImagePixel *grayPix = [REPImagePixel pixelWithRed:average green:average blue:average];
 	
-
-	return [grayPix distanceTo:pixel] < 15.0;
+	return [grayPix distanceTo:pixel isWithin:15];
 }
 
 @end

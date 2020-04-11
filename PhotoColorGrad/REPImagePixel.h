@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (REPImagePixel *)pixelWithRed:(uint8_t)red green:(uint8_t)green blue:(uint8_t)blue;
 
 - (double)distanceTo:(REPImagePixel *)pixel;
+- (BOOL)distanceTo:(REPImagePixel *)pixel isWithin:(double)threshold;
 
 
 @end
