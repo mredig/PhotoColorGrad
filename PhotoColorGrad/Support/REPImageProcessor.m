@@ -54,6 +54,7 @@
 	NSData *imageData = (__bridge_transfer NSData *)imageCfData;
 	uint8_t *bytes = (uint8_t *)imageData.bytes;
 
+	REPPixelCounter *pixelCounter = [[REPPixelCounter alloc] init];
 	for (size_t y = 0; y < imageHeight; y++) {
 		for (size_t x = 0; x < imageWidth; x++) {
 			size_t baseOffset = y * bytesPerRow + x * 4;
@@ -65,13 +66,13 @@
 			REPImagePixel *pixel = [REPImagePixel pixelWithRed:red green:green blue:blue];
 
 			if (![self pixelIsGreyscale:pixel]) {
-				[self.pixels addPixelToPixels:pixel];
+				[pixelCounter addPixelToPixels:pixel];
 			}
 		}
 		double percent = (double)y / (double)imageHeight;
 		NSLog(@"%f complete", percent);
 	}
-	self.pixels = [self condensePixels:self.pixels withinThreshold:50];
+	self.pixels = [self condensePixels:pixelCounter withinThreshold:50];
 
 	NSLog(@"%lu", (unsigned long)[self.pixels.pixels count]);
 	self.orderedColors = [self.pixels pixelsInOrder];
@@ -92,7 +93,6 @@
 
 - (REPPixelCounter *)condensePixels:(REPPixelCounter *)pixels withinThreshold:(double)threshold {
 
-//	NSCountedSet *mergedPixels = [[NSCountedSet alloc] init];
 	REPPixelCounter *mergedPixels = [[REPPixelCounter alloc] init];
 	NSArray *orderArray = pixels.pixelsInOrder;
 
