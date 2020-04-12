@@ -116,7 +116,6 @@
 	return [NSString stringWithFormat:@"red: %d, green: %d, blue: %d, alpha: %d",  self.red, self.green, self.blue, self.alpha];
 }
 
-//copy
 - (id)copyWithZone:(NSZone *)zone {
 	REPImagePixel *pixelCopy = [[[self class] allocWithZone:zone] init];
 	if (pixelCopy) {
