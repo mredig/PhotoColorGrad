@@ -1,23 +1,23 @@
 //
-//  ViewController.m
+//  ImageViewController.m
 //  PhotoColorGrad
 //
 //  Created by Michael Redig on 4/10/20.
 //  Copyright © 2020 Red_Egg Productions. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ImageViewController.h"
 #import <Photos/Photos.h>
 #import "REPImageProcessor.h"
 #import "GradientView.h"
 
-@interface ViewController ()
+@interface ImageViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet GradientView *gradientView;
 
 @end
 
-@implementation ViewController
+@implementation ImageViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
