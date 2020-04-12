@@ -7,5 +7,6 @@ This sample
 * uses CoreGraphics to extract raw image data
 * uses CoreAnimation to render a gradient view
 * embeds a ViewController into a Nav Controller into a Tab bar Controller
+* demos accessing swift code from objc
 
 (this list is not intended to impress, just to note what this might be useful for reference.)
