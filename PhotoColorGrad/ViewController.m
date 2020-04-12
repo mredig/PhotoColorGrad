@@ -39,8 +39,11 @@
 
 	REPImageProcessor *processor = [[REPImageProcessor alloc] init];
 	[processor loadImage:image completionHandler:^{
+		NSArray *colorArray = processor.colors;
 		dispatch_async(dispatch_get_main_queue(), ^{
-			self.gradientView.colors = processor.colors;
+			if (colorArray.count > 1) {
+				self.gradientView.colors = @[colorArray[0], colorArray[1]];
+			}
 		});
 	}];
 }
