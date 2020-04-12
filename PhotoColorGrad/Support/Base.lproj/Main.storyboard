@@ -57,6 +57,35 @@
             </objects>
             <point key="canvasLocation" x="1926.0869565217392" y="143.97321428571428"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="dDw-g6-DUS">
+            <objects>
+                <tableViewController id="2y8-Km-Iht" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GhY-0z-MPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wla-yv-Hht">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wla-yv-Hht" id="4Sv-0O-pHI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2y8-Km-Iht" id="pra-7p-XUp"/>
+                            <outlet property="delegate" destination="2y8-Km-Iht" id="vlC-zg-stZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Lt4-Qq-A7z"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4QE-4z-Nsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926.0869565217392" y="891.29464285714278"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pIN-6u-dlV">
             <objects>
@@ -68,17 +97,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="ken-Gx-ZMc" kind="relationship" relationship="viewControllers" id="tjL-dG-EHj"/>
+                        <segue destination="aXt-gn-D9E" kind="relationship" relationship="viewControllers" id="4gV-kD-tAj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfJ-Vb-7Sz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105.79710144927537" y="143.97321428571428"/>
+            <point key="canvasLocation" x="-162" y="546"/>
         </scene>
-        <!--Item-->
+        <!--Gradient Creation-->
         <scene sceneID="j7k-zj-vYw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ken-Gx-ZMc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gNM-RM-ifj"/>
+                    <tabBarItem key="tabBarItem" title="Gradient Creation" image="pencil.tip" catalog="system" id="gNM-RM-ifj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2M-mU-Dkt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -93,5 +123,28 @@
             </objects>
             <point key="canvasLocation" x="1015.9420289855074" y="143.97321428571428"/>
         </scene>
+        <!--History-->
+        <scene sceneID="5O3-dm-LbM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aXt-gn-D9E" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" id="k6Z-gA-qBQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MUJ-0k-xvS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2y8-Km-Iht" kind="relationship" relationship="rootViewController" id="e9C-SI-Dns"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwL-V0-1dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015.9420289855074" y="890.625"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="pencil.tip" catalog="system" width="99" height="128"/>
+    </resources>
 </document>

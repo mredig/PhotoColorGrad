@@ -10,6 +10,7 @@
 #import <Photos/Photos.h>
 #import "REPImageProcessor.h"
 #import "GradientView.h"
+#import "PhotoColorGrad-Swift.h"
 
 @interface ImageViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -42,7 +43,11 @@
 		NSArray *colorArray = processor.colors;
 		dispatch_async(dispatch_get_main_queue(), ^{
 			if (colorArray.count > 1) {
-				self.gradientView.colors = @[colorArray[0], colorArray[1]];
+				NSArray *newColors = @[colorArray[0], colorArray[1]];
+				self.gradientView.colors = newColors;
+				NSMutableArray *oldSavedValues = [[DefaultWrapper shared].gradientHistory mutableCopy];
+				[oldSavedValues addObject:newColors];
+				[DefaultWrapper shared].gradientHistory = [oldSavedValues copy];
 			}
 		});
 	}];

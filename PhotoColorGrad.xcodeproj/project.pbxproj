@@ -20,6 +20,9 @@
 		3311393424419E5000920C62 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311393324419E5000920C62 /* GradientView.m */; };
 		331139362441AC1800920C62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 331139352441AC1800920C62 /* README.md */; };
 		331139392442AE7600920C62 /* REPPixelCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139382442AE7600920C62 /* REPPixelCounter.m */; };
+		331139552442C79400920C62 /* GradientHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139542442C79400920C62 /* GradientHistoryTableViewController.m */; };
+		331139592442C7BF00920C62 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331139582442C7BF00920C62 /* DefaultsManager.swift */; };
+		3311395B2442C9D800920C62 /* UIColor+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311395A2442C9D700920C62 /* UIColor+Codable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +51,8 @@
 		33113913244061AA00920C62 /* PhotoColorGradTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoColorGradTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33113917244061AA00920C62 /* PhotoColorGradTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoColorGradTests.m; sourceTree = "<group>"; };
 		33113919244061AA00920C62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3311392624411E5F00920C62 /* REPImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = REPImageProcessor.h; path = Support/REPImageProcessor.h; sourceTree = "<group>"; };
-		3311392724411E5F00920C62 /* REPImageProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = REPImageProcessor.m; path = Support/REPImageProcessor.m; sourceTree = "<group>"; };
+		3311392624411E5F00920C62 /* REPImageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPImageProcessor.h; sourceTree = "<group>"; };
+		3311392724411E5F00920C62 /* REPImageProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPImageProcessor.m; sourceTree = "<group>"; };
 		3311392924411EAD00920C62 /* REPImagePixel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPImagePixel.h; sourceTree = "<group>"; };
 		3311392A24411EAD00920C62 /* REPImagePixel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPImagePixel.m; sourceTree = "<group>"; };
 		3311392F2441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCountedSet+NSCountedSet_MostCommon.h"; sourceTree = "<group>"; };
@@ -59,6 +62,11 @@
 		331139352441AC1800920C62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		331139372442AE7600920C62 /* REPPixelCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPPixelCounter.h; sourceTree = "<group>"; };
 		331139382442AE7600920C62 /* REPPixelCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPPixelCounter.m; sourceTree = "<group>"; };
+		331139532442C79400920C62 /* GradientHistoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientHistoryTableViewController.h; sourceTree = "<group>"; };
+		331139542442C79400920C62 /* GradientHistoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientHistoryTableViewController.m; sourceTree = "<group>"; };
+		331139572442C7BF00920C62 /* PhotoColorGrad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoColorGrad-Bridging-Header.h"; sourceTree = "<group>"; };
+		331139582442C7BF00920C62 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		3311395A2442C9D700920C62 /* UIColor+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Codable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,18 +109,9 @@
 		331138FA244061A800920C62 /* PhotoColorGrad */ = {
 			isa = PBXGroup;
 			children = (
-				3311392624411E5F00920C62 /* REPImageProcessor.h */,
-				3311392724411E5F00920C62 /* REPImageProcessor.m */,
-				331139372442AE7600920C62 /* REPPixelCounter.h */,
-				331139382442AE7600920C62 /* REPPixelCounter.m */,
-				3311392924411EAD00920C62 /* REPImagePixel.h */,
-				3311392A24411EAD00920C62 /* REPImagePixel.m */,
-				3311392F2441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.h */,
-				331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */,
-				33113901244061A800920C62 /* ImageViewController.h */,
-				33113902244061A800920C62 /* ImageViewController.m */,
-				3311393224419E5000920C62 /* GradientView.h */,
-				3311393324419E5000920C62 /* GradientView.m */,
+				3311393D2442C71500920C62 /* GradientHistory */,
+				3311393C2442C6A900920C62 /* GradientCreation */,
+				331139562442C79B00920C62 /* Shared */,
 				33113922244061BE00920C62 /* Support */,
 			);
 			path = PhotoColorGrad;
@@ -141,6 +140,44 @@
 				3311390D244061AA00920C62 /* main.m */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		3311393C2442C6A900920C62 /* GradientCreation */ = {
+			isa = PBXGroup;
+			children = (
+				3311392624411E5F00920C62 /* REPImageProcessor.h */,
+				3311392724411E5F00920C62 /* REPImageProcessor.m */,
+				331139372442AE7600920C62 /* REPPixelCounter.h */,
+				331139382442AE7600920C62 /* REPPixelCounter.m */,
+				3311392924411EAD00920C62 /* REPImagePixel.h */,
+				3311392A24411EAD00920C62 /* REPImagePixel.m */,
+				3311392F2441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.h */,
+				331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */,
+				33113901244061A800920C62 /* ImageViewController.h */,
+				33113902244061A800920C62 /* ImageViewController.m */,
+			);
+			path = GradientCreation;
+			sourceTree = "<group>";
+		};
+		3311393D2442C71500920C62 /* GradientHistory */ = {
+			isa = PBXGroup;
+			children = (
+				331139532442C79400920C62 /* GradientHistoryTableViewController.h */,
+				331139542442C79400920C62 /* GradientHistoryTableViewController.m */,
+			);
+			path = GradientHistory;
+			sourceTree = "<group>";
+		};
+		331139562442C79B00920C62 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				331139582442C7BF00920C62 /* DefaultsManager.swift */,
+				3311395A2442C9D700920C62 /* UIColor+Codable.swift */,
+				3311393224419E5000920C62 /* GradientView.h */,
+				3311393324419E5000920C62 /* GradientView.m */,
+				331139572442C7BF00920C62 /* PhotoColorGrad-Bridging-Header.h */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +229,7 @@
 				TargetAttributes = {
 					331138F7244061A800920C62 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					33113912244061AA00920C62 = {
 						CreatedOnToolsVersion = 11.4;
@@ -244,12 +282,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331139552442C79400920C62 /* GradientHistoryTableViewController.m in Sources */,
 				3311392B24411EAD00920C62 /* REPImagePixel.m in Sources */,
 				33113903244061A800920C62 /* ImageViewController.m in Sources */,
 				3311393424419E5000920C62 /* GradientView.m in Sources */,
 				3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */,
 				331139392442AE7600920C62 /* REPPixelCounter.m in Sources */,
 				331138FD244061A800920C62 /* AppDelegate.m in Sources */,
+				3311395B2442C9D800920C62 /* UIColor+Codable.swift in Sources */,
+				331139592442C7BF00920C62 /* DefaultsManager.swift in Sources */,
 				3311390E244061AA00920C62 /* main.m in Sources */,
 				33113900244061A800920C62 /* SceneDelegate.m in Sources */,
 			);
@@ -407,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PhotoColorGrad/Support/Info.plist;
@@ -416,6 +458,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGrad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoColorGrad/Shared/PhotoColorGrad-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -424,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
 				INFOPLIST_FILE = PhotoColorGrad/Support/Info.plist;
@@ -433,6 +479,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.redeggproductions.PhotoColorGrad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PhotoColorGrad/Shared/PhotoColorGrad-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -440,6 +488,7 @@
 		33113920244061AA00920C62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;
@@ -460,6 +509,7 @@
 		33113921244061AA00920C62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L5UZAT7KA9;

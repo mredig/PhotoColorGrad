@@ -14,7 +14,6 @@
 
 @interface REPImageProcessor()
 
-//@property (nonatomic, readwrite) NSCountedSet<REPImagePixel *> *pixels;
 @property (nonatomic, readwrite) REPPixelCounter *pixels;
 @property (nonatomic, readwrite) NSArray *orderedColors;
 
