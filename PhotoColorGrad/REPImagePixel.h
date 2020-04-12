@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface REPImagePixel : NSObject
+@interface REPImagePixel : NSObject <NSCopying>
 
 @property (nonatomic) uint8_t red;
 @property (nonatomic) uint8_t green;

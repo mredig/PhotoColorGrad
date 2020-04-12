@@ -10,10 +10,12 @@
 #import <UIKit/UIKit.h>
 #import "REPImagePixel.h"
 #import "NSCountedSet+NSCountedSet_MostCommon.h"
+#import "REPPixelCounter.h"
 
 @interface REPImageProcessor()
 
-@property (nonatomic, readwrite) NSCountedSet<REPImagePixel *> *pixels;
+//@property (nonatomic, readwrite) NSCountedSet<REPImagePixel *> *pixels;
+@property (nonatomic, readwrite) REPPixelCounter *pixels;
 @property (nonatomic, readwrite) NSArray *orderedColors;
 
 @end
@@ -28,7 +30,7 @@
 }
 
 - (void)reset {
-	_pixels = [NSCountedSet setWithArray:@[]];
+	_pixels = [[REPPixelCounter alloc] init];
 	_orderedColors = [NSArray array];
 }
 
@@ -63,7 +65,7 @@
 			REPImagePixel *pixel = [REPImagePixel pixelWithRed:red green:green blue:blue];
 
 			if (![self pixelIsGreyscale:pixel]) {
-				[self.pixels addObject:pixel];
+				[self.pixels addPixelToPixels:pixel];
 			}
 		}
 		double percent = (double)y / (double)imageHeight;
@@ -71,8 +73,8 @@
 	}
 	self.pixels = [self condensePixels:self.pixels withinThreshold:50];
 
-	NSLog(@"%lu", (unsigned long)[self.pixels count]);
-	self.orderedColors = [self.pixels allItemsInOrderOfCount];
+	NSLog(@"%lu", (unsigned long)[self.pixels.pixels count]);
+	self.orderedColors = [self.pixels pixelsInOrder];
 	NSLog(@"pixels: %@", self.orderedColors);
 
 	completion();
@@ -88,25 +90,25 @@
 	return [grayPix distanceTo:pixel isWithin:15];
 }
 
-- (NSCountedSet<REPImagePixel *> *)condensePixels:(NSCountedSet<REPImagePixel *> *)pixels withinThreshold:(double)threshold {
+- (REPPixelCounter *)condensePixels:(REPPixelCounter *)pixels withinThreshold:(double)threshold {
 
-	NSCountedSet *mergedPixels = [[NSCountedSet alloc] init];
-	NSArray *orderArray = pixels.allItemsInOrderOfCount;
+//	NSCountedSet *mergedPixels = [[NSCountedSet alloc] init];
+	REPPixelCounter *mergedPixels = [[REPPixelCounter alloc] init];
+	NSArray *orderArray = pixels.pixelsInOrder;
 
 	for (int i = 0; i < orderArray.count; i++) {
 		REPImagePixel *thisPixel = (REPImagePixel*)orderArray[i][0];
-		NSUInteger pixelCount = [pixels countForObject:thisPixel];
+		NSUInteger pixelCount = [pixels countForPixel:thisPixel];
 		if (pixelCount == 0) {
 			continue;
 		}
 		for (int j = i; j < orderArray.count; j++) {
 			REPImagePixel *mergePixel = (REPImagePixel*)orderArray[j][0];
-			NSUInteger mergePixelCount = [pixels countForObject:mergePixel];
+			NSUInteger mergePixelCount = [pixels countForPixel:mergePixel];
 			if ([thisPixel distanceTo:mergePixel isWithin:threshold]) {
-				for (int k = 0; k < mergePixelCount; k++) {
-					[pixels removeObject:mergePixel];
-					[mergedPixels addObject:thisPixel];
-				}
+				NSNumber *numberMergeCount = [NSNumber numberWithUnsignedInteger:mergePixelCount];
+				[pixels removePixelFromPixels:mergePixel times:numberMergeCount];
+				[mergedPixels addPixelToPixels:thisPixel times:numberMergeCount];
 			}
 		}
 	}

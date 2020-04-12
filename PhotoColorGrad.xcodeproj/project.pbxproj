@@ -20,6 +20,7 @@
 		331139312441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139302441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m */; };
 		3311393424419E5000920C62 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3311393324419E5000920C62 /* GradientView.m */; };
 		331139362441AC1800920C62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 331139352441AC1800920C62 /* README.md */; };
+		331139392442AE7600920C62 /* REPPixelCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139382442AE7600920C62 /* REPPixelCounter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		3311393224419E5000920C62 /* GradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		3311393324419E5000920C62 /* GradientView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		331139352441AC1800920C62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		331139372442AE7600920C62 /* REPPixelCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REPPixelCounter.h; sourceTree = "<group>"; };
+		331139382442AE7600920C62 /* REPPixelCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REPPixelCounter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 			children = (
 				3311392624411E5F00920C62 /* REPImageProcessor.h */,
 				3311392724411E5F00920C62 /* REPImageProcessor.m */,
+				331139372442AE7600920C62 /* REPPixelCounter.h */,
+				331139382442AE7600920C62 /* REPPixelCounter.m */,
 				3311392924411EAD00920C62 /* REPImagePixel.h */,
 				3311392A24411EAD00920C62 /* REPImagePixel.m */,
 				3311392F2441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.h */,
@@ -245,6 +250,7 @@
 				3311393424419E5000920C62 /* GradientView.m in Sources */,
 				3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */,
 				331139312441574100920C62 /* NSCountedSet+NSCountedSet_MostCommon.m in Sources */,
+				331139392442AE7600920C62 /* REPPixelCounter.m in Sources */,
 				331138FD244061A800920C62 /* AppDelegate.m in Sources */,
 				3311390E244061AA00920C62 /* main.m in Sources */,
 				33113900244061A800920C62 /* SceneDelegate.m in Sources */,
