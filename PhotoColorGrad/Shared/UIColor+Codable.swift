@@ -42,7 +42,7 @@ extension UIColor {
 		let aInt = UInt32(alpha * 255)
 		let total = (rInt << 24) | (gInt << 16) | (bInt << 8) | aInt
 
-		return String(total, radix: 16)
+		return String(total, radix: 16).uppercased()
 	}
 }
 

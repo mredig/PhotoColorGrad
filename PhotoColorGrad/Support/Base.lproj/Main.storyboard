@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,15 +68,42 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradientCell" id="wla-yv-Hht" customClass="GradientCell">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wla-yv-Hht" id="4Sv-0O-pHI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jw6-1w-T8B" customClass="GradientView">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="53.5"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbL-0c-9yP">
+                                                    <rect key="frame" x="182.5" y="8" width="49.5" height="37.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNH-hL-e5I">
+                                                            <rect key="frame" x="8" y="8" width="33.5" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="TextBacking"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="JNH-hL-e5I" secondAttribute="bottom" constant="8" id="GoQ-Em-XVi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JNH-hL-e5I" secondAttribute="trailing" constant="8" id="bMS-dM-kyJ"/>
+                                                        <constraint firstItem="JNH-hL-e5I" firstAttribute="leading" secondItem="zbL-0c-9yP" secondAttribute="leading" constant="8" id="ifC-E2-GrW"/>
+                                                        <constraint firstItem="JNH-hL-e5I" firstAttribute="top" secondItem="zbL-0c-9yP" secondAttribute="top" constant="8" id="oos-3w-3Yf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="zbL-0c-9yP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jw6-1w-T8B" secondAttribute="leading" constant="8" id="Hlo-MF-6DG"/>
+                                                <constraint firstItem="zbL-0c-9yP" firstAttribute="centerX" secondItem="Jw6-1w-T8B" secondAttribute="centerX" id="Tkj-IU-yAg"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zbL-0c-9yP" secondAttribute="trailing" constant="8" id="pkY-f6-mao"/>
+                                                <constraint firstAttribute="bottom" secondItem="zbL-0c-9yP" secondAttribute="bottom" constant="8" id="rIb-0X-xAH"/>
+                                                <constraint firstItem="zbL-0c-9yP" firstAttribute="top" secondItem="Jw6-1w-T8B" secondAttribute="top" constant="8" id="vtB-nd-Cn5"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -86,7 +114,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="backingView" destination="zbL-0c-9yP" id="dv7-0t-44l"/>
                                     <outlet property="gradientView" destination="Jw6-1w-T8B" id="Miy-nd-zhh"/>
+                                    <outlet property="hexLabel" destination="JNH-hL-e5I" id="cb5-uw-2pG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -162,5 +192,8 @@
     <resources>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <namedColor name="TextBacking">
+            <color red="1" green="1" blue="1" alpha="0.2719089686870575" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
