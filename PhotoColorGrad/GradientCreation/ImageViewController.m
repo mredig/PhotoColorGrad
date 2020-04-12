@@ -46,7 +46,7 @@
 				NSArray *newColors = @[colorArray[0], colorArray[1]];
 				self.gradientView.colors = newColors;
 				NSMutableArray *oldSavedValues = [[DefaultWrapper shared].gradientHistory mutableCopy];
-				[oldSavedValues insertObject:newColors atIndex:0]
+				[oldSavedValues insertObject:newColors atIndex:0];
 				[DefaultWrapper shared].gradientHistory = [oldSavedValues copy];
 			}
 		});
