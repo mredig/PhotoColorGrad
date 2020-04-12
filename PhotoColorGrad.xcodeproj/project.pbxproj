@@ -23,6 +23,7 @@
 		331139552442C79400920C62 /* GradientHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331139542442C79400920C62 /* GradientHistoryTableViewController.m */; };
 		331139592442C7BF00920C62 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331139582442C7BF00920C62 /* DefaultsManager.swift */; };
 		3311395B2442C9D800920C62 /* UIColor+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311395A2442C9D700920C62 /* UIColor+Codable.swift */; };
+		3358F6312442CF0300B7FA86 /* GradientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3358F6302442CF0300B7FA86 /* GradientCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		331139572442C7BF00920C62 /* PhotoColorGrad-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotoColorGrad-Bridging-Header.h"; sourceTree = "<group>"; };
 		331139582442C7BF00920C62 /* DefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		3311395A2442C9D700920C62 /* UIColor+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Codable.swift"; sourceTree = "<group>"; };
+		3358F62F2442CF0300B7FA86 /* GradientCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientCell.h; sourceTree = "<group>"; };
+		3358F6302442CF0300B7FA86 /* GradientCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				331139532442C79400920C62 /* GradientHistoryTableViewController.h */,
 				331139542442C79400920C62 /* GradientHistoryTableViewController.m */,
+				3358F62F2442CF0300B7FA86 /* GradientCell.h */,
+				3358F6302442CF0300B7FA86 /* GradientCell.m */,
 			);
 			path = GradientHistory;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				3311392824411E5F00920C62 /* REPImageProcessor.m in Sources */,
 				331139392442AE7600920C62 /* REPPixelCounter.m in Sources */,
 				331138FD244061A800920C62 /* AppDelegate.m in Sources */,
+				3358F6312442CF0300B7FA86 /* GradientCell.m in Sources */,
 				3311395B2442C9D800920C62 /* UIColor+Codable.swift in Sources */,
 				331139592442C7BF00920C62 /* DefaultsManager.swift in Sources */,
 				3311390E244061AA00920C62 /* main.m in Sources */,

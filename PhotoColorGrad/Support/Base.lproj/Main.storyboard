@@ -57,22 +57,37 @@
             </objects>
             <point key="canvasLocation" x="1926.0869565217392" y="143.97321428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Gradient History Table View Controller-->
         <scene sceneID="dDw-g6-DUS">
             <objects>
-                <tableViewController id="2y8-Km-Iht" sceneMemberID="viewController">
+                <tableViewController id="2y8-Km-Iht" customClass="GradientHistoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GhY-0z-MPZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wla-yv-Hht">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradientCell" id="wla-yv-Hht" customClass="GradientCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wla-yv-Hht" id="4Sv-0O-pHI">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jw6-1w-T8B" customClass="GradientView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Jw6-1w-T8B" firstAttribute="top" secondItem="4Sv-0O-pHI" secondAttribute="top" id="6eV-HH-X4a"/>
+                                        <constraint firstItem="Jw6-1w-T8B" firstAttribute="leading" secondItem="4Sv-0O-pHI" secondAttribute="leading" id="WJI-Xa-n48"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jw6-1w-T8B" secondAttribute="bottom" id="as0-Xc-Sak"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jw6-1w-T8B" secondAttribute="trailing" id="tW2-6V-IOQ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gradientView" destination="Jw6-1w-T8B" id="Miy-nd-zhh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,6 +107,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kYs-JN-NP5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DMQ-8D-E3q">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
