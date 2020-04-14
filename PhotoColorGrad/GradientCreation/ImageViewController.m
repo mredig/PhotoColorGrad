@@ -11,6 +11,7 @@
 #import <ColorsFromImage/ColorsFromImage.h>
 #import "GradientView.h"
 #import "PhotoColorGrad-Swift.h"
+#import <SparkleProgress/SparkleProgress.h>
 
 @interface ImageViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -23,6 +24,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+	REPSparkleViewController *controller = [[REPSparkleViewController alloc] init];
+
 }
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
