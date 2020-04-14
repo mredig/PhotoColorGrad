@@ -25,8 +25,6 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-	REPSparkleViewController *controller = [[REPSparkleViewController alloc] init];
-
 }
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
@@ -38,6 +36,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
 	[self dismissViewControllerAnimated:true completion:nil];
+
+	REPSparkleViewController *controller = [[REPSparkleViewController alloc] init];
+	controller.modalPresentationStyle = UIModalPresentationOverFullScreen;
+	[self presentViewController:controller animated:true completion:nil];
 
 	UIImage *image = info[UIImagePickerControllerOriginalImage];
 	self.imageView.image = image;
@@ -53,6 +55,12 @@
 				[oldSavedValues insertObject:newColors atIndex:0];
 				[DefaultWrapper shared].gradientHistory = [oldSavedValues copy];
 			}
+			[controller dismissViewControllerAnimated:YES completion:nil];
+		});
+	} progressHandler:^(double progress) {
+		NSLog(@"%f complete", progress);
+		dispatch_async(dispatch_get_main_queue(), ^{
+			controller.progress = progress;
 		});
 	}];
 }
