@@ -65,9 +65,22 @@
     }
 }
 
-/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+	NSMutableArray *colorsCopy = [[DefaultWrapper shared].gradientHistory mutableCopy];
+
+	NSInteger from = fromIndexPath.row;
+	NSInteger to = toIndexPath.row;
+
+	int iteration = 1;
+	if (from > to) {
+		iteration = -1;
+	}
+
+	for (NSInteger i = from; i != to; i += iteration) {
+		[colorsCopy exchangeObjectAtIndex:i withObjectAtIndex:i + iteration];
+	}
+
+	[DefaultWrapper shared].gradientHistory = [colorsCopy copy];
 }
-*/
 @end
