@@ -35,12 +35,20 @@
 
 - (void)loadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion {
 
+	[self loadImage:image completionHandler:completion progressHandler:^(double progress) {
+		// nothing
+		NSLog(@"%f complete", progress);
+	}];
+
+}
+
+- (void)loadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion progressHandler:(REPImageProcessorProgressHandler)progress {
 	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-		[self internalLoadImage:image completionHandler:completion];
+		[self internalLoadImage:image completionHandler:completion progressHandler:progress];
 	});
 }
 
-- (void)internalLoadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion {
+- (void)internalLoadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion progressHandler:(REPImageProcessorProgressHandler)progress {
 	CGImageRef cgImage = image.CGImage;
 
 	CGDataProviderRef imageDataProvider = CGImageGetDataProvider(cgImage);
@@ -68,10 +76,10 @@
 				[pixelCounter addPixelToPixels:pixel];
 			}
 		}
-		double percent = (double)y / (double)imageHeight;
-		NSLog(@"%f complete", percent);
+		double progressPercent = ((double)y / (double)imageHeight) * 0.5;
+		progress(progressPercent);
 	}
-	self.pixels = [self condensePixels:pixelCounter withinThreshold:50];
+	self.pixels = [self condensePixels:pixelCounter withinThreshold:50 progressHandler:progress];
 
 	NSLog(@"%lu", (unsigned long)[self.pixels.pixels count]);
 	self.orderedColors = [self.pixels pixelsInOrder];
@@ -90,7 +98,7 @@
 	return [grayPix distanceTo:pixel isWithin:15];
 }
 
-- (REPPixelCounter *)condensePixels:(REPPixelCounter *)pixels withinThreshold:(double)threshold {
+- (REPPixelCounter *)condensePixels:(REPPixelCounter *)pixels withinThreshold:(double)threshold progressHandler:(REPImageProcessorProgressHandler)progress  {
 
 	REPPixelCounter *mergedPixels = [[REPPixelCounter alloc] init];
 	NSArray *orderArray = pixels.pixelsInOrder;
@@ -110,6 +118,8 @@
 				[mergedPixels addPixelToPixels:thisPixel times:numberMergeCount];
 			}
 		}
+		double progressPercent = ((double)i / (double)orderArray.count) * 0.5 + 0.5;
+		progress(progressPercent);
 	}
 
 	return mergedPixels;

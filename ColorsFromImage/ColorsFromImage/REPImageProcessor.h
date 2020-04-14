@@ -16,10 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSArray<UIColor *> *colors;
 
 typedef void (^REPImageProcessorCompletionHandler)(void);
+typedef void (^REPImageProcessorProgressHandler)(double progress);
 
 - (instancetype)init;
 
 - (void)loadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion;
+- (void)loadImage:(UIImage *)image completionHandler:(REPImageProcessorCompletionHandler)completion progressHandler:(REPImageProcessorProgressHandler)progress;
 
 
 @end
