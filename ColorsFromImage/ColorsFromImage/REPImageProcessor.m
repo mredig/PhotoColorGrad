@@ -37,7 +37,6 @@
 
 	[self loadImage:image completionHandler:completion progressHandler:^(double progress) {
 		// nothing
-		NSLog(@"%f complete", progress);
 	}];
 
 }
