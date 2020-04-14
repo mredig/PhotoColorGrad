@@ -33,11 +33,22 @@
 - (void)commonInit {
 	NSBundle *bundle = [NSBundle bundleForClass:[REPSparkleScene class]];
 	NSURL *sparkleURL = [bundle URLForResource:@"Sparkles" withExtension:@"sks"];
-	_sparkleNode = [NSKeyedUnarchiver unarchiveObjectWithFile: sparkleURL.path];
 
-	_progress = 0.0;
+	UIImage *sparkImage = [UIImage imageNamed:@"spark" inBundle:bundle withConfiguration:nil];
+
+//	NSData *emitterData = [NSData dataWithContentsOfURL:sparkleURL];
+//	NSError *loadError;
+//	_sparkleNode = [NSKeyedUnarchiver unarchivedObjectOfClass:[SKEmitterNode class] fromData:emitterData error:&loadError];
+//	if (loadError != nil) {
+//		NSLog(@"Error loading sparkles: %@", loadError);
+//	}
+	_sparkleNode = [NSKeyedUnarchiver unarchiveObjectWithFile: sparkleURL.path];
+	self.sparkleNode.particleTexture = [SKTexture textureWithImage:sparkImage];
+	self.sparkleNode.targetNode = self;
+
+	_progress = 1.0;
 	_backgroundStrength = 0.8;
-	_animationSpeed = 100.0;
+	_animationSpeed = 10000.0;
 	_yPosition = self.size.height / 2.0;
 }
 
@@ -53,7 +64,7 @@
 	CGFloat barWidthHalf = barWidth / 2.0;
 	CGFloat barProgressWidth = barWidth * self.progress;
 	CGFloat barProgressWidthHalf = barProgressWidth / 2.0;
-	CGFloat barHeight = 40.0;
+	CGFloat barHeight = 10.0;
 	CGFloat barHeightHalf = barHeight / 2.0;
 	CGFloat yPositionMid = self.yPosition;
 
@@ -75,10 +86,11 @@
 	CGPathCloseSubpath(path);
 
 	SKAction *pathAnimation = [SKAction followPath:path asOffset:NO orientToPath:NO speed:self.animationSpeed];
+	SKAction *repeat = [SKAction repeatActionForever:pathAnimation];
 
 	CGPathRelease(path);
 
-	[self.sparkleNode runAction:pathAnimation withKey:@"pathAnimation"];
+	[self.sparkleNode runAction:repeat withKey:@"pathAnimation"];
 }
 
 - (void)didChangeSize:(CGSize)oldSize {
