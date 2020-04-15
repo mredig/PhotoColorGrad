@@ -61,40 +61,53 @@
 - (void)updateAnimation {
 	CGFloat insetValue = 20.0;
 	CGFloat barWidth = self.frame.size.width - (insetValue * 2.0);
-	CGFloat barWidthHalf = barWidth / 2.0;
+//	CGFloat barWidthHalf = barWidth / 2.0;
 	CGFloat barProgressWidth = barWidth * self.progress;
-	CGFloat barProgressWidthHalf = barProgressWidth / 2.0;
-	CGFloat barHeight = 10.0;
-	CGFloat barHeightHalf = barHeight / 2.0;
+//	CGFloat barProgressWidthHalf = barProgressWidth / 2.0;
+//	CGFloat barHeight = 10.0;
+//	CGFloat barHeightHalf = barHeight / 2.0;
 	CGFloat yPositionMid = self.yPosition;
+//
+//	CGPoint leftTop = CGPointMake(insetValue, yPositionMid + barHeightHalf);
+//	CGPoint leftMid = CGPointMake(insetValue, yPositionMid);
+//	CGPoint leftBottom = CGPointMake(insetValue, yPositionMid - barHeightHalf);
+//	CGPoint rightTop = CGPointMake(insetValue + barProgressWidth, yPositionMid + barHeightHalf);
+//	CGPoint rightMid = CGPointMake(insetValue + barProgressWidth, yPositionMid);
+//	CGPoint rightBottom = CGPointMake(insetValue + barProgressWidth, yPositionMid - barHeightHalf);
+//	CGPoint midTop = CGPointMake(insetValue + barProgressWidthHalf, yPositionMid + barHeightHalf);
+//	CGPoint midBottom = CGPointMake(insetValue + barProgressWidthHalf, yPositionMid - barHeightHalf);
+//
+//	CGMutablePathRef path = CGPathCreateMutable();
+//	CGPathMoveToPoint(path, nil, leftMid.x, leftMid.y);
+//	CGPathAddQuadCurveToPoint(path, nil, leftTop.x, leftTop.y, midTop.x, midTop.y);
+//	CGPathAddQuadCurveToPoint(path, nil, rightTop.x, rightTop.y, rightMid.x, rightMid.y);
+//	CGPathAddQuadCurveToPoint(path, nil, rightBottom.x, rightBottom.y, midBottom.x, midBottom.y);
+//	CGPathAddQuadCurveToPoint(path, nil, leftBottom.x, leftBottom.y, leftMid.x, leftMid.y);
+//	CGPathCloseSubpath(path);
+//
+//	SKAction *pathAnimation = [SKAction followPath:path asOffset:NO orientToPath:NO speed:self.animationSpeed];
+//	SKAction *repeat = [SKAction repeatActionForever:pathAnimation];
+//
+//	CGPathRelease(path);
+//
+//	[self.sparkleNode runAction:repeat withKey:@"pathAnimation"];
 
-	CGPoint leftTop = CGPointMake(insetValue, yPositionMid + barHeightHalf);
-	CGPoint leftMid = CGPointMake(insetValue, yPositionMid);
-	CGPoint leftBottom = CGPointMake(insetValue, yPositionMid - barHeightHalf);
-	CGPoint rightTop = CGPointMake(insetValue + barProgressWidth, yPositionMid + barHeightHalf);
-	CGPoint rightMid = CGPointMake(insetValue + barProgressWidth, yPositionMid);
-	CGPoint rightBottom = CGPointMake(insetValue + barProgressWidth, yPositionMid - barHeightHalf);
-	CGPoint midTop = CGPointMake(insetValue + barProgressWidthHalf, yPositionMid + barHeightHalf);
-	CGPoint midBottom = CGPointMake(insetValue + barProgressWidthHalf, yPositionMid - barHeightHalf);
-
-	CGMutablePathRef path = CGPathCreateMutable();
-	CGPathMoveToPoint(path, nil, leftMid.x, leftMid.y);
-	CGPathAddQuadCurveToPoint(path, nil, leftTop.x, leftTop.y, midTop.x, midTop.y);
-	CGPathAddQuadCurveToPoint(path, nil, rightTop.x, rightTop.y, rightMid.x, rightMid.y);
-	CGPathAddQuadCurveToPoint(path, nil, rightBottom.x, rightBottom.y, midBottom.x, midBottom.y);
-	CGPathAddQuadCurveToPoint(path, nil, leftBottom.x, leftBottom.y, leftMid.x, leftMid.y);
-	CGPathCloseSubpath(path);
-
-	SKAction *pathAnimation = [SKAction followPath:path asOffset:NO orientToPath:NO speed:self.animationSpeed];
-	SKAction *repeat = [SKAction repeatActionForever:pathAnimation];
-
-	CGPathRelease(path);
-
-	[self.sparkleNode runAction:repeat withKey:@"pathAnimation"];
+	uint32_t random = arc4random_uniform(1000000);
+	CGFloat randomDouble = (CGFloat)random / 1000000.0;
+	randomDouble *= barProgressWidth;
+	randomDouble += insetValue;
+	self.sparkleNode.position = CGPointMake(randomDouble, yPositionMid);
 }
 
 - (void)didChangeSize:(CGSize)oldSize {
 	[super didChangeSize:oldSize];
+}
+
+- (void)update:(NSTimeInterval)currentTime {
+	double thing = 1.0;
+
+//	NSLog(@"%f", modf(currentTime, &thing));
+//	printf("%f\n", modf(currentTime, &thing));
 	[self updateAnimation];
 }
 
