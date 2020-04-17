@@ -247,6 +247,8 @@
 			dependencies = (
 			);
 			name = PhotoColorGrad;
+			packageProductDependencies = (
+			);
 			productName = PhotoColorGrad;
 			productReference = 331138F8244061A800920C62 /* PhotoColorGrad.app */;
 			productType = "com.apple.product-type.application";
@@ -297,6 +299,8 @@
 				Base,
 			);
 			mainGroup = 331138EF244061A800920C62;
+			packageReferences = (
+			);
 			productRefGroup = 331138F9244061A800920C62 /* Products */;
 			projectDirPath = "";
 			projectReferences = (

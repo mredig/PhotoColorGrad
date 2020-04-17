@@ -58,7 +58,7 @@
 			[controller dismissViewControllerAnimated:YES completion:nil];
 		});
 	} progressHandler:^(double progress) {
-		NSLog(@"%f complete", progress);
+//		NSLog(@"%f complete", progress);
 		dispatch_async(dispatch_get_main_queue(), ^{
 			controller.progress = progress;
 		});
