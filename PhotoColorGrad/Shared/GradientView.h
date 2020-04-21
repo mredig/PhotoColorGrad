@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GradientView : UIView
 
-@property (nonatomic, readwrite) NSArray<UIColor *> *colors;
+@property (nonatomic, readwrite, copy) NSArray<UIColor *> *colors;
 
 @end
 

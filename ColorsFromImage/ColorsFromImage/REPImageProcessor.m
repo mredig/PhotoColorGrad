@@ -23,12 +23,12 @@
 
 - (instancetype)init {
 	if (self = [super init]) {
-		[self reset];
+		[self commonInit];
 	}
 	return self;
 }
 
-- (void)reset {
+- (void)commonInit {
 	_pixels = [[REPPixelCounter alloc] init];
 	_orderedColors = [NSArray array];
 }
@@ -139,6 +139,10 @@
 		[justColors addObject:pixel.color];
 	}
 	return [justColors copy];
+}
+
+- (REPPixelCounter *)pixels {
+	return _pixels;
 }
 
 @end

@@ -36,6 +36,7 @@
 
 	UIImage *sparkImage = [UIImage imageNamed:@"spark" inBundle:bundle withConfiguration:nil];
 
+	// FIXME: does the new, non deprecated function
 //	NSData *emitterData = [NSData dataWithContentsOfURL:sparkleURL];
 //	NSError *loadError;
 //	_sparkleNode = [NSKeyedUnarchiver unarchivedObjectOfClass:[SKEmitterNode class] fromData:emitterData error:&loadError];
@@ -43,8 +44,8 @@
 //		NSLog(@"Error loading sparkles: %@", loadError);
 //	}
 	_sparkleNode = [NSKeyedUnarchiver unarchiveObjectWithFile: sparkleURL.path];
-	self.sparkleNode.particleTexture = [SKTexture textureWithImage:sparkImage];
-	self.sparkleNode.targetNode = self;
+	_sparkleNode.particleTexture = [SKTexture textureWithImage:sparkImage];
+	_sparkleNode.targetNode = self;
 
 	_progress = 1.0;
 	_backgroundStrength = 0.8;
